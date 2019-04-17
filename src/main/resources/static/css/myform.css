@@ -1,0 +1,27 @@
+.myForm{
+    font-family: "Arial Black";
+
+    display:flex;
+    justify-content: flex-start;
+    flex: 1 1 100%;
+    max-width: 6000px;
+    margin-left: 250px;
+    /*margin: 150px auto;*/
+    padding: 30px;
+    background: cyan;
+    box-sizing: border-box;
+    border: 1px solid #100acc;
+}
+.myForm h1{
+    padding: 5px;
+    height: 100px;
+    margin-top: 5px;
+    margin-left: 300px;
+    background: cornflowerblue;
+   /* padding: 20px;*/
+   /* font-size: 140%;*/
+    font-weight: 500;
+    text-align: center;
+    color: white ;
+   /*!* marging: -16px -16px -16px -16px;*/
+}
