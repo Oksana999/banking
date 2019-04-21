@@ -30,11 +30,12 @@
 </head>
 <body>
 <div class="myForm">
+
 <h1>Registration form</h1>
 
 <form method = "post" action ="${pageContext.request.contextPath}/completeRegistration">
 
-    <lable for = "fname">First Name</lable>
+    <label for = "fname">First Name</label>
     <input type = "text" id="fname" name="firstName" placeholder="Your name..">
     <br>
     <label for="lname">Last Name</label>

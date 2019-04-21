@@ -1,27 +1,44 @@
-.myForm{
-    font-family: "Arial Black";
+/*.myForm{*/
+/*    font-family: "Arial Black";*/
 
-    display:flex;
-    justify-content: flex-start;
-    flex: 1 1 100%;
-    max-width: 6000px;
-    margin-left: 250px;
-    /*margin: 150px auto;*/
-    padding: 30px;
-    background: cyan;
-    box-sizing: border-box;
-    border: 1px solid #100acc;
+/*    !*display:flex;*!*/
+/*    !*justify-content: flex-start;*!*/
+/*    !*flex: 1 1 100%;*!*/
+/*    max-width: 400px;*/
+/*    margin-left: 250px;*/
+/*    !*margin: 150px auto;*!*/
+/*    padding: 10px;*/
+/*    background: cyan;*/
+/*    box-sizing: border-box;*/
+/*    border: 1px solid #100acc;*/
+/*}*/
+/*.myForm h1{*/
+/*    !*padding: 15px;*!*/
+/*    !*height: 100px;*!*/
+/*    !*margin-top: 5px;*!*/
+/*    margin-left: 20px;*/
+/*    background: cornflowerblue;*/
+/*    padding: 15px;*/
+/*    font-size: 140%;*/
+/*    font-weight: 300;*/
+/*    text-align: center;*/
+/*    color: white ;*/
+/*    marging: -16px -16px -16px -16px;*/
+.myForm{
+    /*font: 95% Arial, Helvetica, sans-serif;*/
+    font-family: 'Roboto', sans-serif;
+    /*font-size: 1em;*/
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 16px;
+    background: #F7F7F7;
 }
 .myForm h1{
-    padding: 5px;
-    height: 100px;
-    margin-top: 5px;
-    margin-left: 300px;
-    background: cornflowerblue;
-   /* padding: 20px;*/
-   /* font-size: 140%;*/
-    font-weight: 500;
+    background: #6D84F8;
+    padding: 20px 0;
+    font-size: 140%;
+    font-weight: 300;
     text-align: center;
-    color: white ;
-   /*!* marging: -16px -16px -16px -16px;*/
+    color: #fff;
+    margin: -16px -16px 16px -16px;
 }

@@ -5,10 +5,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="java.time.format.DateTimeFormatter" %>
 <%@ page import="java.lang.String" %>
-<%@ page import="org.banking.banking.entities.Transfer" %>
-<%@ page import="org.banking.banking.entities.Replenishment" %>
-<%@ page import="org.banking.banking.entities.Customer" %>
-<%@ page import="org.banking.banking.entities.Withdrawal" %>
+<%@ page import="org.banking.banking.entities.*" %>
 <%--
   Created by IntelliJ IDEA.
   User: wrros
@@ -121,6 +118,7 @@
     </style>
 
 </head>
+<body>
 <div
 
         id="header"><h1>Personal Service<br>
@@ -307,7 +305,7 @@
                                         ${account.name}
                                 </option>
                             </c:forEach>
-                        </optgroup>
+
                 </select>
 
                 <br>
@@ -369,6 +367,25 @@
                 <%=((Transfer)pageContext.getAttribute("transaction")).getAccountTo().getCustomer().getFirstName()%> :
                 <%=((Transfer) pageContext.getAttribute("transaction")).getAccountTo().getName()%>
             <font color="green"> + ${transaction.value}</font>
+
+            </div>
+        </c:if>
+
+
+        <c:if test="${transaction['class'].name.equals('org.banking.banking.entities.ChangingCurrency')}">
+            <div style="color: #6c705e">
+                Changing :
+                    ${transaction.dateTime.format(dataPattern)}  :
+                <%=((ChangingCurrency)pageContext.getAttribute("transaction")).getAccountToChange().getCurrency()%>
+                <%=((ChangingCurrency)pageContext.getAttribute("transaction")).getAccountToChange().getCustomer().getFirstName()%> :
+                <%= ((ChangingCurrency) pageContext.getAttribute("transaction")).getAccountFromChange().getName()%>
+                <font color="red"> - ${transaction.value } </font>
+                <%=((ChangingCurrency)pageContext.getAttribute("transaction")).getAccountToChange().getCurrency()%>
+                to :
+                <%=((ChangingCurrency)pageContext.getAttribute("transaction")).getAccountFromChange().getCustomer().getFirstName()%> :
+                <%=((ChangingCurrency) pageContext.getAttribute("transaction")).getAccountFromChange().getName()%>
+                <font color="green"> + ${transaction.value}</font>
+                <%=((ChangingCurrency)pageContext.getAttribute("transaction")).getAccountFromChange().getCurrency()%>
 
             </div>
         </c:if>
